@@ -10,7 +10,7 @@ const forecast = (latitude, longitude, callback) => {
         }else if(body.error){
             callback('Invalid latitude or longitude was provided. Please check again.', undefined);
         }else{
-            callback(undefined, body.current.weather_descriptions[0] + '. It is ' + body.current.temperature + ' degrees out, but feels like ' + body.current.feelslike + ' degrees.');
+            callback(undefined, body.current.weather_descriptions[0] + '. It is ' + body.current.temperature + ' degrees out, but feels like ' + body.current.feelslike + ' degrees. the Humidity is '+body.current.weather_descriptions[6]);
         }
     });
 
